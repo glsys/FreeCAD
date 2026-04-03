@@ -483,8 +483,10 @@ def setDefaultTaskPanelLayout(style):
 def advancedOCLFeaturesEnabled():
     return preferences().GetBool(EnableAdvancedOCLFeatures, False)
 
+
 def advancedDrillopLimitationsDisabled():
     return preferences().GetBool(DisableDrillopLimitations, False)
+
 
 def experimentalFeaturesEnabled():
     return preferences().GetBool(EnableExperimentalFeatures, False)
@@ -512,7 +514,9 @@ def suppressVelocity():
     return preferences().GetBool(WarningSuppressVelocity, False)
 
 
-def setPreferencesAdvanced(ocl, warnSpeeds, warnRapids, warnModes, warnOCL, warnVelocity, drillopLimitations):
+def setPreferencesAdvanced(
+    ocl, warnSpeeds, warnRapids, warnModes, warnOCL, warnVelocity, drillopLimitations
+):
     preferences().SetBool(EnableAdvancedOCLFeatures, ocl)
     preferences().SetBool(WarningSuppressAllSpeeds, warnSpeeds)
     preferences().SetBool(WarningSuppressRapidSpeeds, warnRapids)
