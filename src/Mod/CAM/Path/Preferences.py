@@ -69,6 +69,7 @@ WarningSuppressOpenCamLib = "WarningSuppressOpenCamLib"
 WarningSuppressVelocity = "WarningSuppressVelocity"
 EnableExperimentalFeatures = "EnableExperimentalFeatures"
 EnableAdvancedOCLFeatures = "EnableAdvancedOCLFeatures"
+DisableDrillopLimitations = "DisableDrillopLimitations"
 
 
 _observers = defaultdict(list)  # maps group name to callback functions
@@ -482,6 +483,8 @@ def setDefaultTaskPanelLayout(style):
 def advancedOCLFeaturesEnabled():
     return preferences().GetBool(EnableAdvancedOCLFeatures, False)
 
+def advancedDrillopLimitationsDisabled():
+    return preferences().GetBool(DisableDrillopLimitations, False)
 
 def experimentalFeaturesEnabled():
     return preferences().GetBool(EnableExperimentalFeatures, False)
@@ -509,10 +512,11 @@ def suppressVelocity():
     return preferences().GetBool(WarningSuppressVelocity, False)
 
 
-def setPreferencesAdvanced(ocl, warnSpeeds, warnRapids, warnModes, warnOCL, warnVelocity):
+def setPreferencesAdvanced(ocl, warnSpeeds, warnRapids, warnModes, warnOCL, warnVelocity, drillopLimitations):
     preferences().SetBool(EnableAdvancedOCLFeatures, ocl)
     preferences().SetBool(WarningSuppressAllSpeeds, warnSpeeds)
     preferences().SetBool(WarningSuppressRapidSpeeds, warnRapids)
     preferences().SetBool(WarningSuppressSelectionMode, warnModes)
     preferences().SetBool(WarningSuppressOpenCamLib, warnOCL)
     preferences().SetBool(WarningSuppressVelocity, warnVelocity)
+    preferences().SetBool(DisableDrillopLimitations, drillopLimitations)

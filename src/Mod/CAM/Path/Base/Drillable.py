@@ -217,6 +217,8 @@ def isDrillable(obj, candidate, tooldiameter=None, vector=App.Vector(0, 0, 1), a
         raise TypeError("expected a Face or Edge. Got a {}".format(candidate.ShapeType))
 
     try:
+        if Path.Preferences.advancedDrillopLimitationsDisabled():
+            return(True)
         if candidate.ShapeType == "Face":
             if isinstance(candidate.Surface, Part.Cylinder):
                 return isDrillableCylinder(obj, candidate, tooldiameter, vector, allowPartial)

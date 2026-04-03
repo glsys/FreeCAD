@@ -155,6 +155,34 @@
       </item>
      </layout>
     </widget>
+    </item>
+    <item>
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="title">
+      <string>Limitations</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="Gui::PrefCheckBox" name="DisableDrillopLimitations">
+        <property name="text">
+         <string>Allow DrillOp to select and use any face or edge for drilling</string>
+        </property>
+        <property name="prefEntry" stdset="0">
+         <cstring>DisableDrillopLimitations</cstring>
+        </property>
+        <property name="prefPath" stdset="0">
+         <cstring>Mod/CAM</cstring>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
    </item>
    <item>
     <spacer name="verticalSpacer">

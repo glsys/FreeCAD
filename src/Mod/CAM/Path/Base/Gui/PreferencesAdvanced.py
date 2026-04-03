@@ -48,6 +48,7 @@ class AdvancedPreferencesPage:
             self.form.WarningSuppressSelectionMode.isChecked(),
             self.form.WarningSuppressOpenCamLib.isChecked(),
             self.form.WarningSuppressVelocity.isChecked(),
+            self.form.DisableDrillopLimitations.isChecked(),
         )
 
     def loadSettings(self):
@@ -61,6 +62,9 @@ class AdvancedPreferencesPage:
         )
         self.form.EnableAdvancedOCLFeatures.setChecked(
             Path.Preferences.advancedOCLFeaturesEnabled()
+        )
+        self.form.DisableDrillopLimitations.setChecked(
+            Path.Preferences.advancedDrillopLimitationsDisabled()
         )
         self.form.WarningSuppressOpenCamLib.setChecked(Path.Preferences.suppressOpenCamLibWarning())
         self.form.WarningSuppressVelocity.setChecked(Path.Preferences.suppressVelocity())
