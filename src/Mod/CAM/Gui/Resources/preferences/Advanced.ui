@@ -171,7 +171,7 @@
       <item>
        <widget class="Gui::PrefCheckBox" name="DisableDrillopLimitations">
         <property name="text">
-         <string>Allow DrillOp to select and use any face or edge for drilling</string>
+         <string>Enable drill operations on any face or edge</string>
         </property>
         <property name="prefEntry" stdset="0">
          <cstring>DisableDrillopLimitations</cstring>
